@@ -8,10 +8,9 @@ public class Flipper : MonoBehaviour
     [SerializeField] private float yAngle = 0;
     [SerializeField] private float zAngle = 0;
     
-
-    // Update is called once per frame
     void Update()
     {
+        // Rotates the game object on the axle decided in the unity editor
         transform.Rotate(xAngle, yAngle, zAngle);
     }
 }

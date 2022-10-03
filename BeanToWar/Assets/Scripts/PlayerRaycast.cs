@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerRaycast : MonoBehaviour
 {
+    /*
     [SerializeField] private LineRenderer lineRenderer;
     void Update()
     {
@@ -33,5 +34,5 @@ public class PlayerRaycast : MonoBehaviour
     {
         Color color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1f);
         return color;
-    }
+    }*/
 }

@@ -39,6 +39,7 @@ public class TurnManager : MonoBehaviour
             //currentTurnTime = 0;
         }
         
+        // decides which camera should be showing
         if (currentPlayerIndex == 1)
         {
             cameras[1].gameObject.SetActive(false);

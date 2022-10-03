@@ -9,13 +9,10 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Image Hp;
     [SerializeField] private float maxHealth;
     private float health;
-   /* private void Awake()
-    {
-        hpBar = transform.Find("Hp").GetComponent<Image>();
-    }*/
 
     private void Start()
     {
+        // sets the initial health to max
         health = maxHealth;
     }
 
@@ -24,10 +21,11 @@ public class HealthBar : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            // destroys the character when life hits zero
             Destroy(gameObject);
             gameObject.SetActive(false);
         }
-
+        // shows the health ratio on health bar
         Hp.fillAmount = health / maxHealth;
     }
 }

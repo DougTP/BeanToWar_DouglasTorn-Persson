@@ -21,6 +21,7 @@ public class CharacterWeapon : MonoBehaviour
     private void Update()
     {
         bool IsPlayerTurn = playerTurn.IsPlayerTurn();
+        // activates the line renderer
         trajectoryLine.enabled = IsPlayerTurn;
         if (IsPlayerTurn) 
         {
@@ -41,7 +42,7 @@ public class CharacterWeapon : MonoBehaviour
                 
                 // Destroy the projectile
                 Destroy(newProjectile, lifeSpan);
-                //Turns off the trajectile renderer after shooting
+                //Turns off the line renderer after shooting
                 gameObject.GetComponent<LineRenderer>().enabled = false;
             }
         }

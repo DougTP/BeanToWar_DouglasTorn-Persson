@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
             // to move left or right
             if (Input.GetAxis("Horizontal") != 0)
             {
+                // use of rotate to make the character rotate instead of strafe
                 transform.Rotate(transform.up * rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"),
                     Space.World);
             }
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
     
     private bool IsTouchingFloor() //spherecast
     {
+        // Allows the player to jump when "on ground"
         RaycastHit hit;
         return Physics.SphereCast(transform.position, 0.05f, -transform.up, out hit, 1f);
     }
