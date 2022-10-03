@@ -36,6 +36,7 @@ public class CharacterWeapon : MonoBehaviour
                 newProjectile.transform.position = shootingStartPosition.position;
                 newProjectile.transform.rotation = shootingStartPosition.rotation;
                 newProjectile.GetComponent<Projectile>().Initialize(force);
+                // Play Ketchup sound when 'V' is pressed
                 audioSource.Play();
                 
                 // Destroy the projectile
