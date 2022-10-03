@@ -10,6 +10,8 @@ public class TrajectoryLine : MonoBehaviour
 
     public void DrawCurvedTrajectory(Vector3 force, Vector3 initialPosition)
     {
+        // parabolic physics provided by Juliana
+        // creates a trajectory line from the applied game object
         float projectileMass = projectilePrefab.GetComponent<Rigidbody>().mass;
         Vector3 velocity = (force / projectileMass) * Time.fixedDeltaTime;
         float flightDuration = (2 * velocity.y) / -Physics.gravity.y;

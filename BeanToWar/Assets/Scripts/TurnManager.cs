@@ -11,6 +11,7 @@ public class TurnManager : MonoBehaviour
     [SerializeField] private float timeBetweenTurns;
     [SerializeField] private float turnDuration;
     
+    // creates an array for the cameras from cinemachine
     public CinemachineFreeLook[] cameras;
     private int currentPlayerIndex;
     private bool waitingForNextTurn;
@@ -95,6 +96,7 @@ public class TurnManager : MonoBehaviour
             currentPlayerIndex = 1;
         }
         
+        // resets the turn time to zero when new player's turn
         currentTurnTime = 0;
     }
 }

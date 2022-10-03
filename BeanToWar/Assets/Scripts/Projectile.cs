@@ -11,11 +11,13 @@ public class Projectile : MonoBehaviour
 
     public void Initialize(Vector3 direction)
     {
+        //initializes the projectile
         projectileBody.AddForce(direction);
     }
     
     private void OnCollisionEnter(Collision collision)
     {
+        // use tag to see if a player was hit by the projectile
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.collider.gameObject.GetComponent<HealthBar>().wasHit(damage);

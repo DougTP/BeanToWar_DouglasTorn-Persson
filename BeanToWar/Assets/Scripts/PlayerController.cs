@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
+        // use Rigidoby and gravity to jump 
         rb.AddForce(Vector3.up * 100f);
     }
 
