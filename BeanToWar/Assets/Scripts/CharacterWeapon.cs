@@ -8,7 +8,7 @@ public class CharacterWeapon : MonoBehaviour
     [SerializeField] private PlayerTurn playerTurn;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform shootingStartPosition;
-    [SerializeField] private float lifeSpan = 2f;
+    [SerializeField] private float lifeSpan = 1f;
     [SerializeField] private TrajectoryLine trajectoryLine;
     private AudioSource audioSource;
 
